@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" th:href="@{/css/board.css}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+</head>
+<body>
+<div th:insert="common/header.html" id ="header"></div>
+
+<div class="center">
+    <form  action="/post" method="post">
+        제목 : <input type="text" name="title"> <br>
+        작성자 : <input type="text" name="writer"> <br>
+        <textarea name="content"></textarea><br>
+
+        <input type="submit" value="등록">
+    </form>
+</div>
+<!-- FOOTER -->
+<div th:insert="common/footer.html" id="footer"></div>
+</body>
+</html>
