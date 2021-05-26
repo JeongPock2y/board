@@ -51,10 +51,12 @@ public class BoardService {
 
     @Transactional
     public Long savePost(BoardDto boardDto) {
+
         return boardRepository.save(boardDto.toEntity()).getId();
     }
 
     @Transactional
+    // JPArepository 에서 CRUd 기능을 지원함으로  PK를  통하여boardRepository 를 통하여 사용해줌
     public void deletePost(Long id) {
         boardRepository.deleteById(id);
     }

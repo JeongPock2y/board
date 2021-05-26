@@ -11,13 +11,15 @@
 <div th:insert="common/header.html" id ="header"></div>
 
 <div class="center">
-    <form  action="/post" method="post">
-        제목 : <input type="text" name="title"> <br>
-        작성자 : <input type="text" name="writer"> <br>
-        <textarea name="content"></textarea><br>
+    <legend>
+        <form  action="/post" method="post">
 
-        <input type="submit" value="등록">
-    </form>
+        제목   : <input type="text" name="title" placeholder="please enter the title"> <br>
+        작성자 : <input type="text" name="writer" placeholder="작성자를 입력해주세요"> <br>
+        内容: <textarea name="content" placeholder="내용을 입력해주세요"></textarea><br>
+            <input type="submit" value="등록">
+        </form>
+    </legend>
 </div>
 <!-- FOOTER -->
 <div th:insert="common/footer.html" id="footer"></div>

@@ -32,4 +32,5 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok'
     compile('org.springframework.boot:spring-boot-starter-mustache')
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    runtimeOnly('org.springframework.boot:spring-boot-devtools')
 }

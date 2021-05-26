@@ -27,7 +27,7 @@ public class BoardEntity extends TimeEntity {
     private String content;
 
     @Builder
-    public BoardEntity(Long id, String title, String content, String writer) {
+    public BoardEntity(Long id, String writer, String title ,String content) {
         this.id = id;
         this.writer = writer;
         this.title = title;

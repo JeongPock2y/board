@@ -4,7 +4,12 @@ table {
 
 table, th, td {
     border: 1px solid black;
+    margin-right:auto;
+    margin-left:auto;
 }
 
 .center { text-align: center; }
 
+#bb{
+    border: 1px;
+}

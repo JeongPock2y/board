@@ -29,9 +29,9 @@ public class BoardController {
 
     /* 게시글 상세 */
     @GetMapping("/post/{no}")
+    /*URl 경로에 변수: {no} 를 넣어주는  어노테이션 @PathVariable*/
     public String detail(@PathVariable("no") Long no, Model model) {
         BoardDto boardDTO = boardService.getPost(no);
-
         model.addAttribute("boardDto", boardDTO);
         return "board/detail.html";
     }
@@ -42,7 +42,7 @@ public class BoardController {
     public String write() {
         return "board/write.html";
     }
-
+    /*  */
     @PostMapping("/post")
     public String write(BoardDto boardDto) {
         boardService.savePost(boardDto);
@@ -51,7 +51,7 @@ public class BoardController {
     }
 
 
-    /* 게시글 수정 */
+    /* 게시글 수정 페이지 */
     @GetMapping("/post/edit/{no}")
     public String edit(@PathVariable("no") Long no, Model model) {
         BoardDto boardDTO = boardService.getPost(no);
@@ -59,7 +59,7 @@ public class BoardController {
         model.addAttribute("boardDto", boardDTO);
         return "board/update.html";
     }
-
+    //게시글 수정
     @PutMapping("/post/edit/{no}")
     public String update(BoardDto boardDTO) {
         boardService.savePost(boardDTO);
@@ -76,9 +76,9 @@ public class BoardController {
     }
 
     @GetMapping("/board/search")
+    //매핑함수 search  |  RequestParam 어노테이션을 사용하여 클라이언트에서 넘겨주는 keyword를 검색어로 활용
     public String search(@RequestParam(value="keyword") String keyword, Model model) {
         List<BoardDto> boardDtoList = boardService.searchPosts(keyword);
-
         model.addAttribute("boardList", boardDtoList);
 
         return "board/list.html";
