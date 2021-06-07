@@ -6,6 +6,7 @@ table, th, td {
     border: 1px solid black;
     margin-right:auto;
     margin-left:auto;
+    width: 600px;
 }
 
 .center { text-align: center; }

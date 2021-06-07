@@ -19,8 +19,8 @@ id 값이 이미 존재한다면 update가 되도록 동작됩니다. 따라서 
  위한 메서드는 없고, insert와 같은 메서드를 사용.    -->
         <input type="hidden" name="id" th:value="${boardDto.id}"/>
 
-        제목 : <input type="text" name="title" th:value="${boardDto.title}"> <br>
-        작성자 : <input type="text" name="writer" th:value="${boardDto.writer}"> <br>
+        안 건 : <input type="text" name="title" th:value="${boardDto.title}"> <br>
+        책임자 : <input type="text" name="writer" th:value="${boardDto.writer}"> <br>
         <textarea name="content" th:text="${boardDto.content}"></textarea><br>
 
         <input type="submit" value="수정">
