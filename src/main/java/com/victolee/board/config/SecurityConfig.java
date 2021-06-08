@@ -2,6 +2,7 @@ package com.victolee.board.config;
 
 
 import com.victolee.board.service.BoardService;
+import com.victolee.board.service.MemberService;
 import lombok.AllArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
