@@ -42,6 +42,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
                 /*page setting*/
+                /*특정 경로를 지정하며  permitALl or hasRole 등의 메서드르로 역할에따른 접근설정잡아줌*/
                 .antMatchers("/admin/**").hasRole("ADMIN")
                 .antMatchers("/user/myinfo").hasRole("MEMBER")
                 .antMatchers("/**").permitAll()
@@ -56,6 +57,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .logoutRequestMatcher(new AntPathRequestMatcher("/user/logout"))
                 .logoutSuccessUrl("/user/logout/result")
                 .invalidateHttpSession(true)
+                //HttpSession 초기화
             .and()
                 // 403 예외처리
                 .exceptionHandling().accessDeniedPage("/user/denied");
