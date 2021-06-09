@@ -15,7 +15,7 @@ public class BoardController {
     private BoardService boardService;
 
     /* 게시글 목록 */
-    @GetMapping("/")
+    @GetMapping("/1")
     public String list(Model model, @RequestParam(value="page", defaultValue = "1") Integer pageNum) {
         List<BoardDto> boardList = boardService.getBoardlist(pageNum);
         Integer[] pageList = boardService.getPageList(pageNum);
@@ -47,7 +47,7 @@ public class BoardController {
     public String write(BoardDto boardDto) {
         boardService.savePost(boardDto);
 
-        return "redirect:/";
+        return "redirect:/1";
     }
 
 
@@ -64,7 +64,7 @@ public class BoardController {
     public String update(BoardDto boardDTO) {
         boardService.savePost(boardDTO);
 
-        return "redirect:/";
+        return "redirect:/1";
     }
 
     /* 게시글 삭제 */
@@ -72,7 +72,7 @@ public class BoardController {
     public String delete(@PathVariable("no") Long no) {
         boardService.deletePost(no);
 
-        return "redirect:/";
+        return "redirect:/1";
     }
 
     @GetMapping("/board/search")

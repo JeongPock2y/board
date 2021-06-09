@@ -4,13 +4,57 @@ table {
 
 table, th, td {
     border: 1px solid black;
-    margin-right:auto;
-    margin-left:auto;
+    margin-right: auto;
+    margin-left: auto;
     width: 600px;
 }
 
-.center { text-align: center; }
+.center {
+    text-align: center;
+}
 
-#bb{
+#bb {
     border: 1px;
 }
+
+.nav-link {
+    color: blueviolet;
+}
+.btn{
+    width:100px;
+    background-color: #f8585b;
+    border: none;
+    color:#fff;
+    padding: 15px 0;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 4px;
+    cursor: pointer;
+    border-radius: 10px 10px 10px 10px;
+
+}
+
+.btn:hover {
+    background-color: lemonchiffon;
+}
+
+.jumbotron {
+    position: relative;
+    background-image: url("https://lh3.googleusercontent.com/proxy/nIpD-9iRQ0YQ6HHntld76-Hv4hAPRptny19Gis6NxHYtOJ-ogzKmgfgpjqzIfLZ3I_3cWdhYL27ZdRBWLX60ArVAZMaxg5APjbBv8TAeTQq6FlM62aDoadSM");
+    background-size: initial;
+    font-weight: 900;
+    color: black;
+    font-size: 2.9rem;
+}
+.text-secondary{
+    color: black;
+    font-size: 2rem;
+    font-weight: bolder;
+}
+#right_btn{
+    text-align: right;
+}
+
+

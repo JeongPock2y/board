@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    <!--style css 불러와 추가-->
     <link rel="stylesheet" th:href="@{/css/board.css}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 </head>
@@ -11,17 +12,16 @@
 <div th:insert="common/header.html" id ="header"></div>
 
 <div class="center">
-    >
     <legend>
         <form  action="/post" method="post">
 
         안 건  : <input type="text" name="title" placeholder="please enter the title"> <br>
-        책임자 : <input type="text" name="writer" placeholder="작성자를 입력해주세요"> <br>
-        内容: <textarea name="content" placeholder="내용을 입력해주세요"></textarea><br>
-            <input type="submit" value="등록">
+        책임자 : <input type="text" name="writer" placeholder="責任者"> <br>
+        内容: <textarea name="content" placeholder="Enter the contents"></textarea><br>
+            <input type="submit" value="同録">
         </form>
     </legend>
-</>
+</div>
 <!-- FOOTER -->
 <div th:insert="common/footer.html" id="footer"></div>
 </body>

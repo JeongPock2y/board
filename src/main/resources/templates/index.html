@@ -1,10 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:sec="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>메인</title>
+    <!--style css 불러와 추가-->
+    <link rel="stylesheet" th:href="@{/css/board.css}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 </head>
 <body>
+<div class="center">
+    <div th:insert="common/header.html" id="header"></div>
+    <!--If isAnonymous state  Express login & signup page -->
+    <a sec:authorize="isAnonymous()" th:href="@{/user/login}">ログイン</a>
+    <a sec:authorize="isAuthenticated()" th:href="@{/user/logout}">ログアウト</a>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a sec:authorize="isAnonymous()" th:href="@{/user/signup}">会員登録</a>
+    <!--Role file-->
+    <a sec:authorize="hasRole('ROLE_MEMBER')" th:href="@{/user/info}">MyInfo</a>
+    <a sec:authorize="hasRole('ROLE_ADMIN')" th:href="@{/admin}">admin</a>
 
+    <div th:insert="common/footer.html" id="footer"></div>
+</div>
 </body>
 </html>

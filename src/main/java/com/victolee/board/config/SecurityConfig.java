@@ -43,7 +43,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.authorizeRequests()
                 /*page setting*/
                 /*특정 경로를 지정하며  permitALl or hasRole 등의 메서드르로 역할에따른 접근설정잡아줌*/
+                /*ADMIN 만 */
                 .antMatchers("/admin/**").hasRole("ADMIN")
+                /*일반 사용자*/
                 .antMatchers("/user/myinfo").hasRole("MEMBER")
                 .antMatchers("/**").permitAll()
 
