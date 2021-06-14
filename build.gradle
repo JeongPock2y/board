@@ -36,5 +36,7 @@ dependencies {
     /*Spring security를  추가하게 되면  초기 로그인(pw)  및 crsf -> security config 의 csrf 를해줘야함*/
     implementation 'org.springframework.boot:spring-boot-starter-security'
     implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity5'
+    /*변동사항에대한  메일 알림  default : gmail.com*/
+    implementation 'org.springframework.boot:spring-boot-starter-mail'
 
 }
